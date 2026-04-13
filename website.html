@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Secularism</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f4efe9;
+    color: #2b1e17;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+nav h1 { color: #7a3e2e; }
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #7a3e2e;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #efe7df;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* CARDS */
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.card a {
+    color: #7a3e2e;
+    cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 30px;
+    width: 85%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Beyond Secularism</h1>
+    <ul>
+        <li><a onclick="openModal('aboutModal')">What Is This About?</a></li>
+        <li><a onclick="openModal('whyModal')">Why Does It Matter?</a></li>
+        <li><a onclick="openModal('solutionsModal')">What Can We Do?</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>Beyond Secularism</h2>
+    <p>
+        The Canadian education system claims to uphold strict secularism–but does it really? 
+        This project looks at where these claims fall short, why it’s relevant, and what can be done to fix it.
+    </p>
+</section>
+
+<section class="section">
+    <h3>Explore the Project</h3>
+
+    <div class="cards">
+        <div class="card">
+            <h4>What Is This About?</h4>
+            <p>
+                Understanding the truth between Canada’s attempt to create secular education 
+                and the reality of students' experiences.
+            </p>
+            <a onclick="openModal('aboutModal')">Read More →</a>
+        </div>
+
+        <div class="card">
+            <h4>Why Does It Matter?</h4>
+            <p>
+                Learn the impact surface-level secularism impacts youth and the community.
+            </p>
+            <a onclick="openModal('whyModal')">Read More →</a>
+        </div>
+
+        <div class="card">
+            <h4>What Can We Do?</h4>
+            <p>
+                Explore how we can create a true secularist environment that allows students to flourish.
+            </p>
+            <a onclick="openModal('solutionsModal')">Read More →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Naina Ali
+</footer>
+
+<!-- MODALS -->
+
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+    <h2>What Is This About?</h2>
+    <p>
+        Secularism is the act of separating religion from public relations. The aim of this project 
+        is to bring accountability to schools that claim to practice secularism. The grasp that 
+        Christianity has on our government system allows itself to weave its practices into classrooms, 
+        regardless of the intention.
+    </p>
+    <br>
+    <p>
+        An example of these ideologies seeping into supposedly neutral classroom settings can be directly 
+        found in our calendar system. Our mandatory school breaks revolve around Christian centred holidays 
+        such as Easter, Good Friday and Christmas. From this, teachers base classroom activities solely on 
+        these celebrations, only promoting select religious activities.
+    </p>
+  </div>
+</div>
+
+<div id="whyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('whyModal')">&times;</span>
+    <h2>Why Does It Matter?</h2>
+    <p>
+        Lacking in secularism and favouring one religion negatively impacts students who either practice 
+        different religions or none at all. While focusing on the celebrations of one religion individuals 
+        may feel a loss of identity and/or alienated in a predominately Christian setting.
+    </p>
+    <br>
+    <p>
+        Through this division many students may feel lack of representation causing linear thinking and 
+        forcing people to confine themselves into a single standard—in this context the western “standard”.
+    </p>
+  </div>
+</div>
+
+<div id="solutionsModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('solutionsModal')">&times;</span>
+    <h2>What Can We Do?</h2>
+    <p>
+        Realistically it would be too complex to add all religions into the current education system. 
+        Therefore the most realistic solution is to enforce secularism entirely with no double standards.
+    </p>
+    <br>
+    <p>
+        This means removing the discussion of religion entirely and keeping it within private households. 
+        If teachers choose to participate in religious holiday activities, it is crucial to not concentrate 
+        on a singular belief.
+    </p>
+    <br>
+    <p>
+        Creating a genuine neutral space will allow students to focus on meaningful connections without 
+        learned biases, while also allowing minorities to have a presence within the space they grow up in.
+    </p>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
